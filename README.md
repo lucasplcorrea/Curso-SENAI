@@ -1,2 +1,2 @@
-# Curso-SENAI
-Projetos realizados durante o curso FuturoDEV[ECO]
+# Curso SENAI
+## Projetos realizados durante o curso FuturoDEV[ECO]
