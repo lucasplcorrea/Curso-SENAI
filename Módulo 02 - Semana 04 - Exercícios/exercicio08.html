@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+
+<body>
+    <h1>Exercicio 8</h1>
+    <script>
+        function parOuImpar() {
+            let numero = parseInt(window.prompt("Por favor, digite um número inteiro:"));
+            if (numero === 0) {
+                console.log("O número digitado é zero.");
+            } else if (numero % 2 === 0) {
+                console.log(`${numero} é um número par.`);
+            } else {
+                console.log(`${numero} é um número ímpar.`);
+            }
+        }
+        parOuImpar();
+    </script>
+</body>

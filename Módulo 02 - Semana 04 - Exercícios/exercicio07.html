@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+
+<body>
+    <h1>Exercicio 7</h1>
+    <script>
+        function saudacao() {
+            let horaDigitada = window.prompt("Por favor, digite a hora no formato HH:mm:");
+
+            let hora = parseInt(horaDigitada.split(":")[0]);
+
+            if (hora >= 0 && hora < 12) {
+                console.log("Bom dia!");
+            } else if (hora >= 12 && hora < 18) {
+                console.log("Boa tarde!");
+            } else {
+                console.log("Boa noite!");
+            }
+        }
+
+        saudacao();
+
+    </script>
+
+</body>
+
+</html>
