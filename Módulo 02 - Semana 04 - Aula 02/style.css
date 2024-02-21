@@ -1,0 +1,480 @@
+:root {
+    --notification: #58A6FF;
+    --github-dark: #010409;
+    --github-dark-lighter: #0D1117;
+    --github-dark-border: #30363D;
+    --github-button-hover: #8B949E;
+    --background: #171B20;
+    --color: #828B94;
+    --github: #C9D1D9;
+    --navigation-hover: #292F36;
+    --navbar-height: 60px;
+    --primary: #DD946F;
+    --secondary: #261E5A;
+    --footer-background: #121a29;
+    --text-color: #FAFBFC;
+    --text-gray: #FEFEFE;
+    --text-heading-gray: #F4F5F6;
+    --text-primary: #FAFBFC;
+    --button-color: #404652;
+    --button-border: #6B707C;
+}
+
+body {
+    font-family: "Segoe UI", "Noto Sans", sans-serif;
+    font-size: 16px;
+    background-color: var(--github-dark-lighter);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu__wrapper {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    z-index: 2;
+    gap: 24px;
+    background-color: var(--github-dark);
+    height: var(--navbar-height);
+    padding: 0px 24px;
+    border-bottom: 1px solid var(--github-dark-border);
+    align-items: center;
+}
+
+.logo__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page__title {
+    color: var(--github);
+    padding: 8px 12px;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.page__title:hover {
+    background-color: var(--background);
+}
+
+.notification-mark {
+    width: 8px;
+    height: 8px;
+    top: -3px;
+    right: -3px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--notification);
+}
+
+@media (max-width: 400px) {
+    .page__title {
+        display: none;
+    }
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.logo svg {
+    fill: var(--github);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.action-button {
+    position: relative;
+    display: grid;
+    grid-auto-columns: max-content;
+    width: 32px;
+    height: 32px;
+    color: var(--github-dark-lighter);
+    background: transparent;
+    border: 1px solid var(--github-dark-border);
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background: var(--github-dark-lighter);
+    border: 1px solid var(--github);
+}
+
+.action-button svg {
+    fill: var(--github-button-hover);
+}
+
+.avatar-profile {
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    border: 1px solid var(--github-dark-border);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.navigation__menu {
+    background-color: var(--background);
+    z-index: 3;
+    border-left: 1px solid var(--github-dark-border);
+    height: 100vh;
+    opacity: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 12px;
+    right: 0;
+    position: fixed;
+    box-shadow:
+        rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeInAnimation ease-in-out 0.5s forwards;
+}
+
+.navigation__menu__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style-type: none;
+    margin: 0px;
+    margin-top: 16px;
+    padding: 0px;
+    color: var(--github-button-hover);
+}
+
+.navigation__menu__items>li {
+    display: flex;
+    gap: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 36px;
+    border-radius: 6px;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color);
+    padding: 0px 8px;
+}
+
+.navigation__menu__items>li>a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 36px;
+    padding: 0px 8px;
+    cursor: pointer;
+    color: var(--color);
+}
+
+.navigation__menu__items>li>a>svg {
+    fill: var(--github);
+}
+
+.navigation__menu__items>li:hover {
+    background-color: var(--navigation-hover);
+    color: var(--github);
+}
+
+.navigation__menu__items>li>svg {
+    fill: var(--github);
+}
+
+.navigation__menu__items>.separator {
+    display: flex;
+    align-items: center;
+    height: 6px;
+    padding: 0px;
+}
+
+.navigation__menu__items>.separator:hover {
+    background-color: var(--background);
+}
+
+.navigation__menu__items>.separator>hr {
+    border: 1px solid var(--github-dark-border);
+    width: 100%;
+}
+
+.avatar-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.avatar-wrapper .avatar-profile {
+    width: 42px;
+    height: 42px;
+}
+
+.avatar-name-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-name-alias {
+    color: var(--github);
+    font-weight: 600;
+}
+
+.avatar-name {
+    color: var(--color);
+    font-size: 12px;
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin-left: auto;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+.close-button:hover {
+    background-color: var(--navigation-hover);
+}
+
+.close-button svg {
+    height: 16px;
+    width: 16px;
+    fill: var(--github);
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        max-width: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        max-width: 320px;
+    }
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOutAnimation
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        max-width: 320px;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        max-width: 0px;
+        visibility: hidden;
+    }
+}
+
+.background {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 80px 32px;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 24px;
+}
+
+.articles article {
+    max-width: 320px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.articles article a {
+    display: inline-flex;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+.articles article h2 {
+    margin: 0 0 18px 0;
+    font-size: 1.6rem;
+    color: var(--secondary);
+    transition: color 0.3s ease-out;
+}
+
+
+.articles article img {
+    max-width: 100%;
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+}
+
+.article-preview {
+    padding: 24px;
+    background: white;
+    min-height: 250px;
+}
+
+.articles figure {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.articles figure img {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.articles article:hover img {
+    transform: scale(1.5);
+}
+
+footer {
+    background-color: var(--github-dark);
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto; /* Essa propriedade é crucial para manter o footer no final da página */
+}
+
+.footer-wrapper {
+    display: flex;
+    background: var(--github-dark);
+    flex-direction: column;
+    max-width: 1320px;
+}
+
+
+.footer-line {
+    display: block;
+    width: 100%;
+    height: 8px;
+}
+
+
+.footer-centering {
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    padding: 16px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--text-gray);
+}
+
+.footer-bottom > small {
+    font-size: 16px;
+    margin: 0 4px;
+}
+
+.footer-line {
+    display: block;
+    min-width: 40px;
+    height: 2px;
+    background-color: var(--text-gray);
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.social-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.social-links ul {
+    display: flex;
+    gap: 12px;
+    list-style-type: none;
+}
+
+
+@media (max-width: 800px) {
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px 8px 32px 8px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: space-between;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
