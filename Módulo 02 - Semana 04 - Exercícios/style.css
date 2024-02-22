@@ -1,0 +1,16 @@
+body {
+    font-family: "Segoe UI", "Noto Sans", sans-serif;
+    font-size: 16px;
+    background-color: #0D1117;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
