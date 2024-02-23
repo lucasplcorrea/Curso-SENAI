@@ -56,7 +56,7 @@ main {
 
 .btn-github, .btn-linkedin {
     display: inline-block;
-    width: 120px;
+    width: 140px; 
     padding: 10px 20px;
     margin-right: 10px;
     border-radius: 5px;
@@ -66,17 +66,37 @@ main {
     transition: background-color 0.3s;
 }
 
+#btnAlerta {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    background-color: #f00; 
+}
+
 .btn-github {
     background-color: #333;
 }
 
 .btn-linkedin {
-    background-color: #0077b5;
+    background-color: #225b7a;
 }
 
-.btn-github:hover, .btn-linkedin:hover {
+.btn-github img, .btn-linkedin img {
+    width: 20px; 
+    height: 20px;
+    margin-bottom: -3px; 
+    border-radius: 0;
+}
+
+.btn-github:hover, .btn-linkedin:hover, #btnAlerta:hover {
     background-color: #444;
 }
+
 
 footer {
     background-color: #333; 
