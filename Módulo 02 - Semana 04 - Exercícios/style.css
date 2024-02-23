@@ -50,6 +50,34 @@ main {
     color: #fff; 
 }
 
+.botoes {
+    margin-top: 20px; 
+}
+
+.btn-github, .btn-linkedin {
+    display: inline-block;
+    width: 120px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-github {
+    background-color: #333;
+}
+
+.btn-linkedin {
+    background-color: #0077b5;
+}
+
+.btn-github:hover, .btn-linkedin:hover {
+    background-color: #444;
+}
+
 footer {
     background-color: #333; 
     color: #fff; 
