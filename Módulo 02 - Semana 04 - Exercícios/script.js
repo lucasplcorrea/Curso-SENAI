@@ -1,0 +1,1 @@
+window.alert("Bem-vindo! Espero que goste do meu site.");
