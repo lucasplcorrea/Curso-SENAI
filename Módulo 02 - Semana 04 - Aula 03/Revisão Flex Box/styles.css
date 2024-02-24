@@ -1,0 +1,40 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: purple;
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    /* text-align: justify;  */
+    /* justify-content: center; ALINHAMENTO HORIZONAL */
+    /* align-items: center; ALINHAMENTO VERTICAL  */
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
