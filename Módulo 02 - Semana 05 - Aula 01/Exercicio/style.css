@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background: green;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.logo {
+    background-color: black;
+    width: 40px;
+    height: 20px;
+}
+
+.botoes {
+
+}
+
+.content {
+    background: rgb(223, 154, 154);
+    height: 100%;
+}
