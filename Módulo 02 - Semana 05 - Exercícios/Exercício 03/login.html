@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="grid-container">
+            <!-- col1 = imagem -->
+            <div class="col1"></div>
+            <!-- col2 = conteudo -->
+            <div class="col2">
+
+                <span clas="title">
+                    Prime Bank
+                </span>
+                <span class="mt-6 subtitle text-muted">Acesse sua Conta</span>
+                <form id="form-login" class="mt-14" onsubmit="login(event)">
+                    <input id="inputEmail" required type="email" placeholder="Email" name="" id="">
+                    <input id="inputSenha" required type="password" placeholder="Senha" name="" id="">
+                    <span>Esqueceu a Senha?</span>
+                    <button type="submit">Log in</button>
+                </form>
+                <label class="mt-14 text-muted t-c">Or Login with</label>
+                <div class="row mt-6">
+                    <label class="t-c">Google</label>
+                    <label class="t-c">Apple</label>
+                </div>
+                <span class="dont-account">Não tem uma conta? <b>Cadastre-se</b></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function login(e) {
+            e.preventDefault()
+            const email = document.getElementById('inputEmail').value;
+            const senha = document.getElementById('inputSenha').value;
+
+            const data = [
+                {
+                    id: 1,
+                    email: 'lucas@lucas',
+                    senha: '123',
+                }
+            ]
+            const result = data.find(item => item.email === email && item.senha === senha)
+            if (!result) {
+                alert('Email e/ou senha incorretos.')
+            } else {
+                alert('Bem vindo a sua conta')
+            }
+        }
+    </script>
+</body>
+
+</html>
