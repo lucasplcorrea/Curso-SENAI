@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -21,8 +22,8 @@ body {
     align-items: center;
     background-color: #640fee5b;
     background-image: url('../images/bg.svg');
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     width: 100vw;
     height: 100vh;
 }
@@ -32,7 +33,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 600px;
+    height: 700px;
     width: 600px;
     background-color: aqua;
     margin: 0;
@@ -45,7 +46,7 @@ body {
     background-color: blue;
     background-image: url('../images/subbg.svg');
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     width: 100%;
     height: 300px;
     margin: 0;
@@ -58,7 +59,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 300px;
+    height: 400px;
     margin: 0;
     padding: 0;
 }
@@ -70,7 +71,8 @@ body {
     align-items: center;
 }
 
-#login, #senha {
+#login,
+#senha {
     border-radius: 10px;
     background-color: #0000004f;
     margin: 10px;
@@ -85,11 +87,11 @@ body {
 }
 
 #login::placeholder {
-    color: #fff; 
+    color: #fff;
 }
 
 #senha::placeholder {
-    color: #fff; 
+    color: #fff;
 }
 
 .input-icon {
@@ -97,7 +99,7 @@ body {
 }
 
 .input-icon input {
-    padding-left: 30px; 
+    padding-left: 30px;
 }
 
 #login-icon::before {
@@ -107,13 +109,13 @@ body {
     left: 20px;
     top: 45%;
     transform: translateY(-50%);
-    color: transparent; 
+    color: transparent;
     font-size: 22px;
     width: 22px;
     height: 22px;
-    background-image: linear-gradient(to bottom right, #01F0FF, #975AE8); 
-    -webkit-background-clip: text; 
-    background-clip: text; 
+    background-image: linear-gradient(to bottom right, #01F0FF, #975AE8);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 #senha-icon::before {
@@ -123,20 +125,69 @@ body {
     left: 20px;
     top: 45%;
     transform: translateY(-50%);
-    color: transparent; 
+    color: transparent;
     font-size: 22px;
     width: 22px;
     height: 22px;
-    background-image: linear-gradient(to bottom right, #01F0FF, #975AE8); 
-    -webkit-background-clip: text; 
-    background-clip: text; 
+    background-image: linear-gradient(to bottom right, #01F0FF, #975AE8);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .separador {
     display: flex;
     background-color: transparent;
-    margin-top: -20px;
+    margin-top: 15px;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    color: #fff;
+}
+
+.logado {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.conta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.conta a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.conta a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.loginbt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to bottom right, #01F0FF, #975AE8);
+    padding: 5px 40px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 2px #eee;
+    border-radius: 15px;
+    display: block;
+    border: none;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
