@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function adicionarAoCarrinho(produto) {
         carrinho.push(produto);
         atualizarListaCompras();
+        atualizarValorTotal();
     }
 
     // Função para atualizar a lista de compras na tela
@@ -43,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Função para calcular o valor total da compra
-    function calcularValorTotal() {
+    // Função para calcular e atualizar o valor total da compra
+    function atualizarValorTotal() {
         let total = 0;
         // Percorrer cada item do carrinho e somar os preços
         carrinho.forEach(item => {
@@ -102,5 +103,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('buyButton').addEventListener('click', comprarProduto);
 
     // Adicionar evento de clique ao botão de consultar valor total
-    document.getElementById('totalButton').addEventListener('click', calcularValorTotal);
+    document.getElementById('totalButton').addEventListener('click', atualizarValorTotal);
 });
