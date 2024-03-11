@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         carrinho.push(produto);
         atualizarListaCompras();
         atualizarValorTotal();
+        atualizarQuantidadeProdutos();
     }
 
     // Função para atualizar a lista de compras na tela
@@ -58,6 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             totalValueElement.innerText = 'Carrinho vazio';
         }
+    }
+
+    // Função para atualizar o número de produtos no carrinho
+    function atualizarQuantidadeProdutos() {
+        const quantidadeProdutosElement = document.getElementById('quantidade-produtos');
+        quantidadeProdutosElement.innerText = carrinho.length;
     }
 
     // Função para consultar o valor do produto

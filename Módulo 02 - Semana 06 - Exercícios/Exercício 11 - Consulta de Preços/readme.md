@@ -33,3 +33,13 @@
 ## Exercício 05 - Coloque na tela o valor total do carrinho de forma dinâmica
 
 - Mostre dinamicamente o valor total do carrinho para o usuário, posicione uma tag de texto para receber este valor sempre que o consumidor apertar no botão ‘comprar’.
+
+## Exercício 06 - Coloque na tela o número de produtos presentes no carrinho de forma dinâmica
+
+- Mostre dinamicamente o número de produtos presentes no carrinho para o usuário, posicione uma tag de texto para receber este valor sempre que o consumidor apertar no botão ‘comprar’.
+
+## Exercício 07 - Adicione os itens do carrinho em localStorage para manter armazenado
+
+- A cada nova ‘adição no carrinho', atualize uma chave no localStorage para registrar todos os produtos comprados pelo usuário.
+
+- No inicio da aplicação, coloque uma leitura desses itens presentes no localStorage e atualize o valor total e qtd de itens em tela.
