@@ -62,3 +62,11 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
+#clearButton {
+    background-color: #dc3545;
+}
+
+#clearButton:hover {
+    background-color: #9c2531;
+}
