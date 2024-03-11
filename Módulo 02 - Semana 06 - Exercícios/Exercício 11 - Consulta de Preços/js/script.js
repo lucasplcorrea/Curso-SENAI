@@ -43,6 +43,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Função para calcular o valor total da compra
+    function calcularValorTotal() {
+        let total = 0;
+        // Percorrer cada item do carrinho e somar os preços
+        carrinho.forEach(item => {
+            total += item.preco;
+        });
+        // Exibir o valor total na tela
+        const totalValueElement = document.getElementById('totalValue');
+        if (total > 0) {
+            totalValueElement.innerText = `Valor total da compra: R$ ${total.toFixed(2)}`;
+        } else {
+            totalValueElement.innerText = 'Carrinho vazio';
+        }
+    }
+
     // Função para consultar o valor do produto
     function consultarValorProduto() {
         // Obter o código ou nome do produto digitado pelo usuário
@@ -84,4 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adicionar evento de clique ao botão de comprar produto
     document.getElementById('buyButton').addEventListener('click', comprarProduto);
+
+    // Adicionar evento de clique ao botão de consultar valor total
+    document.getElementById('totalButton').addEventListener('click', calcularValorTotal);
 });
