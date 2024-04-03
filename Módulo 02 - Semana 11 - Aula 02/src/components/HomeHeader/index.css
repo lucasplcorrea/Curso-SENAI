@@ -1,0 +1,5 @@
+.home-header-wrapper {
+ background-color: var(--bg-header);
+ padding: 3rem 2rem;
+ color: var(--text-primary);
+}
