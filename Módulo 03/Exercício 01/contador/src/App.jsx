@@ -1,9 +1,7 @@
+import AppRoutes from './routes';
+
 function App() {
-  return (
-    <div>
-      <h1>Meu Projeto React</h1>
-    </div>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
