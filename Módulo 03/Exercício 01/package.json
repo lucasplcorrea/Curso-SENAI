@@ -1,0 +1,14 @@
+{
+  "name": "exercicio01",
+  "version": "1.0.0",
+  "description": "Exercício 01",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.4.4"
+  }
+}
